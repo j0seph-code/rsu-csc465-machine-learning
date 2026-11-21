@@ -30,5 +30,9 @@ print("gradient of g at (4, 1): exact", grad_g(v),
       "numerical", np.round(num, 3))
 
 for step in range(1, 6):        # gradient descent, learning rate 0.2
-    v = v - 0.2 * grad_g(v)
+    v = v - 0.6 * grad_g(v)
     print(f"step {step}: v = {np.round(v, 3)}  g(v) = {g(v):.4f}")
+""" Learning rate 0.4 g(v)=  Converges the fastest at 0.1088
+   Learning rate 0.05 g(v)After 5 steps converges slowly at 5.08708
+  Learning rate 0.6 Diverges at 520.6584
+"""
